@@ -11,14 +11,20 @@
     <input type="number"máx="100" id="nota 2" placeholder="Insira a nota 2"
 
     <button id="Calcular" onclick="calcular ()" </button>
-    <p a sua média é: id="média" </p>
-    <p id="status"></p>
+    <p A sua média é: id="média" </p
+    <p id="status" </p> 
     <script> //script é back end 
         function calcular (){
             var N1,N2,média
             N1=document.getElementById('nota 1')
             N2=document.getElementById('nota 2')
-            média=(parseFloat9(N1)+parseFloat(N2))
+            média=(parseFloat9(N1)+parseFloat(N2))/2 
+            document.getElementById('média').innerHTML=média
+            if(média<70){ 
+                document.getElementById('status').innerHTML="Reprovado"
+            } else{
+                document.getElementById('status').innerHTML="Aprovado"
+            }
         }
     </script>
 
